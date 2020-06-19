@@ -1,0 +1,30 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "node ./src/bot.js"
+  },
+  "author": "Innovation",
+  "license": "ISC",
+  "dependencies": {
+    "ascii-table": "0.0.9",
+    "discord.js": "^12.2.0",
+    "imageapi.js": "^1.0.3",
+    "moment": "^2.26.0",
+    "moment-duration-format": "^2.3.2",
+    "ms": "^2.1.2",
+    "try": "^0.13.3"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Innovation612/Belluga-bot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Innovation612/Belluga-bot/issues"
+  },
+  "homepage": "https://github.com/Innovation612/Belluga-bot#readme",
+  "description": ""
+}
