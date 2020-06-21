@@ -18,6 +18,7 @@ module.exports = {
     const _ = new MessageEmbed()
       .setTitle(`New announcement!`)
       .setDescription(`${MSG}`)
+      .setFooter(`${message.author.username} created this poll.`)
       .setColor("RANDOM");
     rChannel.send(_);
     message.delete();

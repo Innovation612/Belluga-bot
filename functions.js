@@ -1,15 +1,28 @@
 module.exports = {
-    calculator: function (num1, operator, num2) {
-      if (!num1) throw new TypeError("Missing num1");
-      if (!operator) throw new TypeError("Missing operator");
-      if (!num2) throw new TypeError("Missing num2");
-      if (operator == "*") return num1 * num2;
-      if (operator == "^") return num1 ^ num2;
-      if (operator == "+") return num1 + num2;
-      if (operator == "-") return num1 - num2;
-      if (operator == "/") return num1 / num2;
-    },
-    formatDate: function (date) {
-      return new Intl.DateTimeFormat("en-US").format(date);
-    },
-  };
+    getMember: function(message, toFind = '') {
+        toFind = toFind.toLowerCase();
+
+        let target = message.guild.members.get(toFind);
+
+        if(!target && message.mentions.members)
+            target = message.mentions.members.first();
+
+            if(!target && toFind) {
+                target = message.guild.members.find(member => {
+                    return members.displayName.toLowerCase().includes(toFind) ||
+                    member.user.tag.toLowerCase().includes(toFind)
+                })
+            }
+
+            if(!target)
+                target = message.member;
+
+            return target;
+
+        },
+
+        formatDate: function(date) {
+            return new Intl.DateTimeFormat('en-US').format(date);
+        }
+
+    }

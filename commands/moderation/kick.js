@@ -2,7 +2,7 @@ const { MessageEmbed } = require("discord.js");
 module.exports = {
   name: "kick",
   description: "Kick a specified user from the server",
-  category: "fun",
+  category: "moderation",
   usage: "<user id> <reason>",
   run: async (bot, message, args) => {
     if (!args[0])
@@ -34,6 +34,7 @@ module.exports = {
     User.kick(Reason);
     const Embed = new MessageEmbed()
       .setTitle(`You have kicked a member!`)
+      .setFooter(`${message.author.username} created this poll.`)
       .setDescription(
         `You have kicked the user ${
           bot.users.cache.get(User.id).username

@@ -2,7 +2,7 @@ const { MessageEmbed } = require("discord.js");
 module.exports = {
   name: "ban",
   description: "Ban a specified user from the server",
-  category: "fun",
+  category: "moderation",
   usage: "<user id> <reason>",
   run: async (bot, message, args) => {
     if (!args[0])
@@ -31,6 +31,7 @@ module.exports = {
     User.ban(Reason);
     const Embed = new MessageEmbed()
       .setTitle(`You have banned a member!`)
+      .setFooter(`${message.author.username} created this poll.`)
       .setDescription(
         `You have banned the user ${
           bot.users.cache.get(User.id).username

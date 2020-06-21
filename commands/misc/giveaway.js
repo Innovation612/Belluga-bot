@@ -4,7 +4,7 @@ module.exports = {
   name: "giveaway",
   description: "Create a simple giveaway",
   usage: "<time> <channel> <prize>",
-  category: "fun",
+  category: "misc",
   run: async (bot, message, args) => {
     if (!args[0]) return message.channel.send(`You did not specify your time!`);
     if (
@@ -29,6 +29,7 @@ module.exports = {
       .setDescription(
         `The user ${message.author} is hosting a giveaway for the prize of **${prize}**`
       )
+      .setFooter(`${message.author.username} created this poll.`)
       .setTimestamp(Date.now() + ms(args[0]))
       .setColor(`BLUE`);
     let m = await channel.send(Embed);
@@ -48,6 +49,7 @@ module.exports = {
       channel.send(
         `The winner of the giveaway for **${prize}** is... ${winner}`
       );
+      
     }, ms(args[0]));
   },
 };
