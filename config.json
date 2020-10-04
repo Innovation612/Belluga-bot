@@ -1,4 +1,8 @@
 {
-    "token": "NjU0NDM1MTk5Nzg2MTU2MDc0.Xu4Ydg.lu9PgP2dP22zUxRC81QZix2B3pM",
-    "prefix": "£"
+  "prefix": "j",
+  "mongoPass": "mongodb+srv://Innovation:LeoniShannon17@bellugacluster.vgghq.mongodb.net/<dbname>?retryWrites=true&w=majority",
+  "red": "#b70000",
+  "orange": "ff6a00",
+  "green": "00ff26",
+  "purple": "#d604cf"
 }
